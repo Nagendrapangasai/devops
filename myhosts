@@ -5,5 +5,5 @@
 
 
 [mywebservers:vars]
-nagendrawebpackonubuntu= apache222
+nagendrawebpackonubuntu= apache2
 mywebpackonredhat= httpd
