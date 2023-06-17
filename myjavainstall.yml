@@ -1,7 +1,8 @@
 ---
 - hosts: mywebserver
+  become: yes
   tasks:
-  - name: i want to install java on ubuntu nodes
+  - name: i want to install java on ubuntu 
     apt:
       name: "{{openjdk-8-jdk}}" 
       state: present
@@ -9,7 +10,7 @@
 
 
   - name: i want to install java on redhat nodes
-    apt:
+    ansible.builtin.dnf:
      name:
      state: present
     when: ansible_os_family =="Redhat"  
